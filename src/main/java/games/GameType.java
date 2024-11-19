@@ -2,6 +2,10 @@ package games;
 
 import core.*;
 import core.rules.AbstractRuleBasedForwardModel;
+import games.bamboo.BambooForwardModel;
+import games.bamboo.BambooGUIManager;
+import games.bamboo.BambooGameState;
+import games.bamboo.BambooParameters;
 import games.battlelore.*;
 import games.battlelore.gui.BattleloreGUI;
 import games.blackjack.*;
@@ -222,7 +226,11 @@ public enum GameType {
     WarOfTheToads(2, 2,
             Arrays.asList(Strategy, Abstract, Cards),
             Collections.singletonList(TrickTaking),
-            ToadGameState.class, ToadForwardModel.class, ToadParameters.class, ToadGUIManager.class);
+            ToadGameState.class, ToadForwardModel.class, ToadParameters.class, ToadGUIManager.class),
+    Bamboo(2, 5,
+            null,
+            null,
+            BambooGameState.class, BambooForwardModel.class, BambooParameters.class, BambooGUIManager.class);
 
 
     // Core classes where the game is defined
