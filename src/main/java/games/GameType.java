@@ -57,6 +57,9 @@ import games.toads.ToadForwardModel;
 import games.toads.ToadGUIManager;
 import games.toads.ToadGameState;
 import games.toads.ToadParameters;
+import games.totoro.TotoroForwardModel;
+import games.totoro.TotoroGameState;
+import games.totoro.TotoroParameters;
 import games.uno.*;
 import games.uno.gui.*;
 import games.virus.*;
@@ -214,7 +217,11 @@ public enum GameType {
     WarOfTheToads(2, 2,
             Arrays.asList(Strategy, Abstract, Cards),
             Collections.singletonList(TrickTaking),
-            ToadGameState.class, ToadForwardModel.class, ToadParameters.class, ToadGUIManager.class);
+            ToadGameState.class, ToadForwardModel.class, ToadParameters.class, ToadGUIManager.class),
+    Totoro(1, 1,
+            null,
+            null,
+            TotoroGameState.class, TotoroForwardModel.class, TotoroParameters.class, PrototypeGUIManager.class);
 
 
     // Core classes where the game is defined
