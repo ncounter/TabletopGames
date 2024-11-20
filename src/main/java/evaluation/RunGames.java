@@ -35,7 +35,7 @@ import static java.util.stream.Collectors.toList;
 public class RunGames implements IGameRunner {
 
     // Config
-    Map<RunArg, Object> config = new HashMap<>();
+    public static Map<RunArg, Object> config = new HashMap<>();
 
     // Vars for running
     Map<GameType, int[]> gamesAndPlayerCounts;

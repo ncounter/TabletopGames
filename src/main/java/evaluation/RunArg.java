@@ -1,6 +1,5 @@
 package evaluation;
 
-import org.apache.hadoop.yarn.webapp.hamlet.HamletSpec;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -11,7 +10,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
-import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toMap;
 import static utilities.Utils.getArg;
 
@@ -39,6 +37,7 @@ public enum RunArg {
             "\t If this is specified, then all other arguments are ignored.",
             "",
             new Usage[]{Usage.RunGames, Usage.ParameterSearch}),
+    debug("Override the debug flag in order to set the level of log details.", false, new Usage[]{Usage.RunGames}),
     destDir("The directory to which the results will be written. Defaults to 'metrics/out'.\n" +
             "\t If (and only if) this is being run for multiple games/player counts, then a subdirectory\n" +
             "\t will be created for each game, and then within that for  each player count combination.",
