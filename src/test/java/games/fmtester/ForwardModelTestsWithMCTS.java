@@ -110,4 +110,9 @@ public class ForwardModelTestsWithMCTS {
     public void testMastermind() {
         new ForwardModelTester("game=Mastermind", "nGames=10", "nPlayers=1", "agent=json\\players\\gameSpecific\\TicTacToe.json");
     }
+
+    @Test
+    public void testR3() {
+        new ForwardModelTester("game=R3", "nGames=10", "nPlayers=2", "agent=json/players/mcts.json");
+    }
 }
