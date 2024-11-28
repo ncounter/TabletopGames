@@ -36,7 +36,7 @@ public class PassAction extends AbstractAction {
     public PassAction(int numberCards, int operatorCards){
         this.numberCards = numberCards;
         this.operatorCards = operatorCards;
-        this.shufflingCards = numberCards + numberCards == 0;
+        this.shufflingCards = numberCards + operatorCards == 0;
     }
 
     /**
